@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quality Training game</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Quality Training game</h1>
+  <p>Drag the Quality rule over to the matching definition</p>
+  <p>Przeciągnij regułę jakości do definicji dopasowania</p>
+
+  <main class="container">
+    <div>
+      <ul class="draggable-list">
+        <li id="e1" draggable="true">Pro Activeness</li>
+        <li id="e2" draggable="true">Self-Control</li>
+        <li id="e3" draggable="true">Development</li>
+        <li id="e4" draggable="true">Guidelines</li>
+        <li id="e5" draggable="true">Awareness</li>
+        <li id="e6" draggable="true">Learning</li>
+        <li id="e7" draggable="true">Caution</li>
+        <li id="e8" draggable="true">Accuracy</li>
+        <li id="e9" draggable="true">Team Spirit</li>
+      </ul>
+    </div>
+    <div>
+      <ul class="draggable-list">
+        <li id="s1" draggable="true">Always control your actions and verify what you have done.</li>
+        <li id="s2" draggable="true">If you do not understand or you are not sure – check the procedure or ask your colleagues first. </li>
+        <li id="s3" draggable="true">Use the procedures regularly in your daily work.</li>
+        <li id="s4" draggable="true">Use an open dialog. Feel responsible for keeping a good atmosphere, where everyone can learn, share knowledge and feel respected</li>
+        <li id="s5" draggable="true">Avoid making mistakes, but in case they happen, use them as lessons learned.</li>
+        <li id="s6" draggable="true">Remember that your activities have impact on the other teams and processes.</li>
+        <li id="s7" draggable="true">Work with requests actively, support our clients professionally.</li>
+        <li id="s8" draggable="true">Revise your knowledge regularly and verify if your information is up to date. Update the procedures and your colleagues.</li>
+        <li id="s9" draggable="true">Respect deadlines and closing periods. Be aware that activities cannot be delayed.</li>
+      </ul>
+    </div>
+  </main>
+  <!-- table & game end -->
+  <div id="endMessage">
+    <h3>Well done!</h3>
+
+    <table>
+      <tr>
+        <th>Golden Rule</th>
+        <th>Definition</th>
+      </tr>
+      <tr>
+        <td>Pro Activeness</td>
+        <td>Work with requests actively, support our clients professionally.</td>
+      </tr>
+      <tr>
+        <td>Self Control</td>
+        <td>Always control your actions and verify what you have done.</td>
+      </tr>
+      <tr>
+        <td>Development</td>
+        <td>Revise your knowledge regularly and verify if your information is up to date. Update the procedures and your colleagues</td>
+      </tr>
+      <tr>
+        <td>Guidelines</td>
+        <td>Use the procedures regularly in your daily work.</td>
+      </tr>
+      <tr>
+        <td>Awareness</td>
+        <td>Remember that your activities have impact on the other teams and processes.</td>
+      </tr>
+      <tr>
+        <td>Learning</td>
+        <td>Avoid making mistakes, but in case they happen, use them as lessons learned.</td>
+      </tr>
+      <tr>
+        <td>Caution</td>
+        <td>If you do not understand or you are not sure – check the procedure or ask your colleagues first.</td>
+      </tr>
+      <tr>
+        <td>Accuracy</td>
+        <td>Respect deadlines and closing periods. Be aware that activities cannot be delayed.</td>
+      </tr>
+      <tr>
+        <td>Team Spirit</td>
+        <td>Use an open dialog. Feel responsible for keeping a good atmosphere, where everyone can learn, share knowledge and feel respected.</td>
+      </tr>
+
+
+    </table>
+
+    <button onclick="playAgain()">Play Again</button>
+  </div>
+
+  <script src="js/script.js"></script>
+
+  
+</body>
+</html>
