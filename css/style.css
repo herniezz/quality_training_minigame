@@ -3,6 +3,7 @@
   margin: auto;
 }
 
+
 body {
   background-color: #eceff1;
   font-family: sans-serif;
@@ -40,8 +41,7 @@ li {
 
 table {
   max-width:640px;
-  margin: auto;
-  margin-bottom: 20px;
+  margin: auto auto 20px;
   /* border: 1px solid #b0bec5; */
 }
 
@@ -72,7 +72,12 @@ button {
 button:hover {
   background-color: #516a75;
 }
-
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 #endMessage {
   display: none;
 }
