@@ -16,6 +16,8 @@ addEventListeners();
 //function to run when a list item is dragged
 function dragStart() {
   selectedId = this.id;
+  event.dataTransfer.effectAllowed = 'move';
+  event.dataTransfer.setData('text/plain', 'rightToLeft');
 }
 //function to run when a list item is dragged over a drop zone
 function dragEnter() {
@@ -28,6 +30,12 @@ function dragLeave() {
 //function to run when a list item is dragged over a drop zone
 function dragOver(ev) {
   ev.preventDefault();
+  if (event.dataTransfer.getData('text/plain') === 'rightToLeft') {
+    // Allow drop event
+  } else {
+    // Cancel drop event
+    return false;
+  }
 }
 //if the selected and drop target phrases match, hide and increment the counter
 function dragDrop() {
