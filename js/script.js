@@ -41,22 +41,31 @@ function dragOver(ev) {
 function dragDrop() {
   dropTargetId = this.id;
 
-  if (checkForMatch(selectedId, dropTargetId)) {
+  if (checkForMatch(selectedId, dropTargetId) || checkForMatch2(selectedId, dropTargetId)) {
     document.getElementById(selectedId).style.display = 'none';
     document.getElementById(dropTargetId).style.display = 'none';
     matchingCounter++;
-  } else if (checkForMatch2(selectedId, dropTargetId)) {
-    document.getElementById(selectedId).style.display = 'none';
-    document.getElementById(dropTargetId).style.display = 'none';
-    matchingCounter++;
+
+    // Update the counter display
+    document.getElementById('counterDisplay').innerText = `Correct Matches: ${matchingCounter}`;
+  } else {
+    // Add shake class for animation
+    const incorrectItem = document.getElementById(selectedId);
+    incorrectItem.classList.add('shake');
+    // Remove the shake class after animation is complete
+    setTimeout(() => incorrectItem.classList.remove('shake'), 1000);
   }
-  //if all matches are found, show the end message
+
+  // If all matches are found, show the end message
   if (matchingCounter === 9) {
     endMessage.style.display = 'block';
   }
 
   this.classList.remove('over');
 }
+
+
+
 //function to check if two phrases match
 function checkForMatch(selected, dropTarget) {
   switch (selected) {
@@ -131,8 +140,9 @@ function playAgain() {
   endMessage.style.display = 'none';
   draggableListItems.forEach(item => {
     document.getElementById(item.id).style.display = 'block';
-  })
+  });
 }
+
 
 function addEventListeners() {
   draggableListItems.forEach (item => {
